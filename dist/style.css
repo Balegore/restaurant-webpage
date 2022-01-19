@@ -1,0 +1,53 @@
+body{
+    background-color: black;
+}
+
+#content{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.header{
+    background: white;
+    flex: 1;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.mainContainer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 400px;
+    min-height: 800px;
+}
+
+.dynamicContainer{
+    display: flex;
+    flex-flow: column;
+    background: white;
+    min-height: 75%;
+    width: 100%;
+    flex: 1;
+}
+
+.tabContainer{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}   
+
+.menuTab{
+    background-color:white;
+    color: rgb(33, 83, 28);
+    padding-top: 10px;
+    border: 1px solid black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100px;
+    font-size: 18px;
+    text-align: center;    
+}
