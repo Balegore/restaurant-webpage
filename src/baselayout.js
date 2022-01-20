@@ -1,19 +1,11 @@
 //create base layout for website
+import createElement from "./create-element.js";
 
 const layout = document.createDocumentFragment();
 
 //text to go into tabs
 const tabsText = ['About',' Menu', 'Contact'] 
 
-function createElement(html, text, classes){
-    
-    const element = document.createElement(`${html}`);
-    
-    element.innerText = text;
-    element.classList.add(classes);
-    
-    return element;
-}
 
 function createTabs(){
     const tabContainer = createElement('div', '', 'tabContainer')
@@ -25,15 +17,15 @@ function createTabs(){
     return tabContainer;
 }
 //create header
-layout.appendChild(createElement('div', 'JJ Joy', 'header'));
+layout.appendChild(createElement('div', 'Header', 'header'));
+layout.appendChild(createTabs());
 
 //create container for tabs and dynamic container and append
 const container = createElement('div', '', 'mainContainer');
-container.appendChild(createTabs());
-container.appendChild(createElement('div', '', 'dynamicContainer'));
+container.appendChild(createElement('div', 'This is content', 'dynamicContainer'));
 layout.appendChild(container);
 
 //create footer
-layout.appendChild(createElement('div', '', 'footer'));
+layout.appendChild(createElement('div', 'Footer', 'footer'));
 
 export default layout;
