@@ -1,7 +1,6 @@
 *{
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-    margin: 2px;   
 }
 
 body{
@@ -45,6 +44,7 @@ body{
     display: flex;
     flex-flow: row;
     justify-content: center;  
+    background-color: white;
 }
 
 .tabContainer > * {

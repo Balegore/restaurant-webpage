@@ -1,5 +1,10 @@
 import baselayout from './baselayout';
+import aboutFragement from './about';
 
-const container = document.querySelector('#content');
+const content = document.querySelector('#content');
 
-container.appendChild(baselayout);
+content.appendChild(baselayout);
+
+const dynamicContainer = document.querySelector('.dynamicContainer');
+
+dynamicContainer.appendChild(aboutFragement);

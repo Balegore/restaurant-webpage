@@ -22,7 +22,7 @@ layout.appendChild(createTabs());
 
 //create container for tabs and dynamic container and append
 const container = createElement('div', '', 'mainContainer');
-container.appendChild(createElement('div', 'This is content', 'dynamicContainer'));
+container.appendChild(createElement('div', '', 'dynamicContainer'));
 layout.appendChild(container);
 
 //create footer
