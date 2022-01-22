@@ -1,4 +1,4 @@
-const createElement = function(html, text, classes){
+const createNode = function(html, text, classes){
     
     const element = document.createElement(`${html}`);
     
@@ -8,4 +8,4 @@ const createElement = function(html, text, classes){
     return element;
 }
 
-export default createElement;
+export default createNode;
