@@ -1,22 +1,40 @@
-import createElement from "./create-element";
+import createNode from "./createnode";
 
 const aboutFragement = document.createDocumentFragment();
+const aboutContainer = createNode('div', null, 'aboutContainer');
+const timeContainer = createNode('div', null, 'timeContainer');
 
-const aboutText =  `JJ Joy Asian Cusine brings a mix of well known classics with a korean twist.`;
-
+const aboutText =  `Joy Buffet Asian Cusine brings a mix of well known classics with a korean twist.`;
 const phoneNumber = `236-422-3344`;
 
-const hours = 
-`Dine-In Open
-11:30am-2:30pm
-Takeout
-11:30am-2:30pm
-4:30pm-8:00pm
-Delivery
-4:30pm-8:00pm`;
+const morningHours = `11:30am-2:30pm`;
+const eveningHours = `4:30pm-8:00pm`;
+const timeHeaders = [   {name:'Dine-in',
+                         morning: true,
+                         evening: false,},
+                        {name: 'Take-out',
+                         morning: true,
+                         evening: true}, 
+                        {name: 'Delivery',
+                         morning: false,
+                         evening: true,}];
+ 
+function createTimeTable(header, morning, evening){
+    const timeTable = createNode('li', header, 'timeHeader');
+    if(morning){ timeTable.appendChild(createNode('li', morningHours)) };      
+    if(evening){ timeTable.appendChild(createNode('li', eveningHours)) };
 
-aboutFragement.appendChild(createElement('div', '', 'about'));
-aboutFragement.appendChild(createElement(`div`, aboutText, 'aboutMessagge'));
-aboutFragement.appendChild(createElement('div', hours, 'hours'));
+    return timeTable;
+}
+
+aboutContainer.appendChild(createNode(`div`, aboutText, 'aboutMessage'));
+
+timeHeaders.forEach(element => {
+    timeContainer.appendChild(createTimeTable(element.name, element.morning, element.evening))
+});
+
+aboutFragement.appendChild(aboutContainer);
+aboutFragement.appendChild(timeContainer);
+
 
 export default aboutFragement;

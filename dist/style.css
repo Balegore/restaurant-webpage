@@ -6,12 +6,9 @@
 body{
     display: flex;
     flex-flow: column nowrap;
-    max-width: 1080px;
-    margin-left: auto;
-    margin-right: auto;
     background-color: black;
-    margin-top: 0px;
-    padding-top: 0px;
+    margin: 0px;
+    padding: 0px;
     height: 100vh;
 }
 
@@ -40,18 +37,39 @@ body{
     flex: 1 1 100%; 
 }
 
+/*about tab*/
+.aboutContainer{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutMessage{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 24px;
+}
+
+.hours{
+text-align: center;
+}
+
+/*tabs*/
 .tabContainer{
     display: flex;
     flex-flow: row;
     justify-content: center;  
     background-color: white;
+    
 }
 
 .tabContainer > * {
     flex: 1 1 100%
 }
 
-.menuTab{
+.tab{
     background-color:white;
     color: rgb(33, 83, 28);
     padding-top: 10px;

@@ -1,9 +1,16 @@
-const createNode = function(html, text, classes){
+const createNode = function(nodeType, text, classes, id){
     
-    const element = document.createElement(`${html}`);
+    const element = document.createElement(`${nodeType}`);
     
-    element.innerText = text;
-    element.classList.add(classes);
+    if(text){ 
+        element.innerText = text; 
+    };    
+    if(classes){ 
+        element.classList.add(classes); 
+    };
+    if(id){ 
+        element.setAttribute('id', id)
+    };
     
     return element;
 }
